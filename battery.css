@@ -1,0 +1,45 @@
+*{
+    margin: o;
+    padding: 0;
+
+}
+
+
+.battery{
+    width: 200px;
+    height: 60px;
+    border: solid 5px white;
+    border-radius: 10px;
+    position: relative;
+    margin: 300px auto;
+    
+  
+}
+.battery::before{
+    content: '';
+    background: white;
+    border-radius: 3px;
+    height: 30px;
+    width: 15px;
+    position: absolute;
+    top: 23%;
+    right: -12%;
+    transform: translateX(-50%);
+}
+.battery::after{
+    content: '';
+    animation: fill  3s linear infinite;
+    background-color: #FFC300 ;
+    border-radius: 5px;
+    height: 52px;
+    width: 20%;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+}
+@keyframes fill {
+    0%{width:20%;}
+    50%{width:55%;}
+    100%{width:90%;}
+    
+}
